@@ -1,0 +1,24 @@
+_eu4dll_fetch
+_eu4dll_src
+.vs
+.vscode
+binaries
+dist
+monitor
+
+*.exe
+*.dll
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+# ---- 补齐（防御性）----
+ida_dbs/
+*.i64
+ref/
+_ref_yozora/
+*.zip
+*.log
+__pycache__/
+stubbytes.txt

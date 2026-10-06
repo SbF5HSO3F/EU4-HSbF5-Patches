@@ -1,0 +1,25 @@
+NOTICE
+======
+
+1. 本仓库不包含任何游戏文件
+   仓库中不含 Europa Universalis IV 的任何可执行文件、数据文件、本地化文件或美术资源。
+   使用本补丁需要你自行拥有该游戏。
+
+2. 本仓库不含第三方补丁的源代码
+   仓库中不含 EU4DLL / 双字节补丁（Plugin / Plugin64 / version.dll）的源代码或二进制。
+   本补丁只是运行在其提供的 plugins\ 加载机制之上，并在 README 中致谢。
+
+3. 运行方式与风险
+   本补丁通过进程内钩子（inline hook）在**运行时**修改游戏进程的内存行为，
+   不修改磁盘上的任何游戏文件。请自行评估使用风险。
+
+4. 商标
+   Europa Universalis IV 及相关名称、标识为 Paradox Interactive AB 的商标或注册商标。
+   本项目与 Paradox Interactive 无任何关联，未获其授权或认可。
+
+5. LGPL 合规说明
+   本工程以 LGPL-3.0 授权（其基础为 GPL-3.0，正文见 LICENSE 与 LICENSE.GPL）。
+   本补丁以【独立的 DLL】形式分发，由游戏原有的 version.dll 在启动时载入，
+   不静态链接进 eu4.exe，也不修改 eu4.exe 的任何字节。
+   因此使用者可以直接替换 plugins\MonarchNameFix.dll 来使用修改后的版本，
+   满足 LGPL 关于"使用者能够替换该库"的要求。
