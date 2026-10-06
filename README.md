@@ -75,3 +75,10 @@ MSVC x64。运行 `src\monarchnamefix\build.bat`（需要环境变量 `VCVARS64`
 - 所有把 EU4 逆向成果公开分享的人。
 
 重要声明见 [NOTICE](NOTICE)。
+
+## 许可
+
+**MIT License** —— 见 [LICENSE](LICENSE)
+SPDX-License-Identifier: `MIT`
+
+本仓库部分文件衍生自第三方作品（均为宽松许可），其作者、许可与完整声明见 [THIRD-PARTY.md](THIRD-PARTY.md)。
