@@ -5,9 +5,14 @@ NOTICE
    仓库中不含 Europa Universalis IV 的任何可执行文件、数据文件、本地化文件或美术资源。
    使用本补丁需要你自行拥有该游戏。
 
-2. 本仓库不含第三方补丁的源代码
-   仓库中不含 EU4DLL / 双字节补丁（Plugin / Plugin64 / version.dll）的源代码或二进制。
-   本补丁只是运行在其提供的 plugins\ 加载机制之上，并在 README 中致谢。
+2. 本仓库含第三方代码，已按要求署名
+   钩子辅助代码（`reg_pack.hpp` / `bytepattern.hpp` / `hookmem.hpp`）衍生自
+   LINK/2012 的 "Injectors"（zlib 许可），经 matanki-saito/EU4dll（MIT 许可）取得，
+   在本仓库中为**改写版**。此外还引用了 bruceCzK 的双字节编码方案。
+   各第三方作品的作者、许可与完整声明见 THIRD-PARTY.md。
+
+   本仓库**不含** EU4DLL / 双字节补丁的二进制或源代码
+   （Plugin / Plugin64 / version.dll 均不含）；本补丁只是运行在其提供的 plugins\ 加载机制之上。
 
 3. 运行方式与风险
    本补丁通过进程内钩子（inline hook）在**运行时**修改游戏进程的内存行为，

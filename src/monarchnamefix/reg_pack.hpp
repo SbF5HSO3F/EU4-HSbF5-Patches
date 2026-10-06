@@ -2,6 +2,8 @@
  * reg_pack.hpp - 寄存器包（照 EU4dll 的 Injectors/assembly.hpp 设计）
  *
  * 出处：matanki-saito/EU4dll Plugin64/assembly.hpp（Copyright (C) 2012-2014
+ *  【改写版】本文件在原作基础上按本工程需要做了删减、改名与结构调整，不代表原作者的原版实现；
+ *            原作者、原许可与完整声明见 THIRD-PARTY.md。
  * LINK/2012，zlib 风格许可）。已验证其 git blob SHA1 = 4e48bd58caf223b43ba5e61662cc52ba5de9f82d。
  *
  * 目的：让钩子的业务逻辑可以完全用 C++ 写 ——

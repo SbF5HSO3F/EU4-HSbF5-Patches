@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """逐字节确认 CMonarch 里存的是【name + dynasty 两个字段】还是【拼好的全名】。
 
-判据（reversed/cmonarch_get_full_name.cpp）：
+判据（（私有还原笔记，未随本仓库发布））：
     CMonarch_GetFullName:  out = name;  out += " ";  out += dynasty->name;
     ⇒ 显示 = name + " " + dynasty
     ⇒ 若 name 里已经含了姓，显示时会重复出现姓

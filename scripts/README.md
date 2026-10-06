@@ -48,7 +48,6 @@
 | `find_ruler.py` | 在存档里定位指定 tag 的统治者 / 继承人记录，打印其 name= 与 dynasty=。 |
 | `find_save_culture_usage.py` | 从存档里找出 shandong_culture 的【真实用途】，以及它对应的国家。 |
 | `fix_duplicate_0h.py` | 修正 交接-按文化决定姓名顺序.md 里 §0-H 的重复编号。 |
-| `fix_game_paths.py` | 把 notes 里指向"还原函数目录"的路径从 game/ 改到 reversed/。 |
 | `fix_log_tags_after_rename.py` | 修正上一遍留下的问题：日志串里不该出现"带对齐空格的显示名"（一次性）。 |
 | `ida_dump_bytes.py` | (无自述注释) |
 | `ida_scan_r12.py` | 在 EffectImpl_CreateGeneral (create_general) 内扫描 r12 的所有写入与使用，确认 r12 在 |

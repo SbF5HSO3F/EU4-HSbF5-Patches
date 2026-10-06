@@ -65,6 +65,12 @@ MSVC x64。运行 `src\monarchnamefix\build.bat`（需要环境变量 `VCVARS64`
 
 ## 致谢
 
+**代码衍生的第三方作品**（本仓库部分文件在其基础上改写，详见 [THIRD-PARTY.md](THIRD-PARTY.md)）
+
+- **LINK/2012 — "Injectors"（zlib 许可）**：`reg_pack.hpp` / `bytepattern.hpp` / `hookmem.hpp` 的原作
+- **matanki-saito/EU4dll（MIT 许可）**：上述代码的取得渠道
+- **bruceCzK**：双字节编码方案（`specialEscape`）
+
 - **EU4DLL / 双字节补丁**：提供 `plugins\` 加载机制与 CJK 显示基础，本补丁运行在其之上。
 - 所有把 EU4 逆向成果公开分享的人。
 

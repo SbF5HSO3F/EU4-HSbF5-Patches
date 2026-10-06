@@ -2,6 +2,8 @@
  * bytepattern.hpp - 字节模式搜索（C++）
  *
  * 参照双字节补丁（EU4dll, matanki-saito/EU4dll）的 Plugin64/byte_pattern.*，
+ *  【改写版】本文件在原作基础上按本工程需要做了删减、改名与结构调整，不代表原作者的原版实现；
+ *            原作者、原许可与完整声明见 THIRD-PARTY.md。
  * 其核心注释写明源自 https://github.com/ThirteenAG/Hooking.Patterns 。
  *
  * 相对原库的取舍：

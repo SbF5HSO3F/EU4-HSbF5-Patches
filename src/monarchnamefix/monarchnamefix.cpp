@@ -1229,7 +1229,7 @@ typedef void (*mnp_append_fn)(void *dst, const void *src, size_t n);
  *   ② 绝不调用会抛 C++ 异常的游戏函数（__try/__except 捕获不了 C++ 异常）——
  *      这里只做字段读写与字节搬移；
  *   ③ 本函数只负责业务逻辑。被我们覆盖掉的那条原指令
- *      （`mov dword ptr [rbp-50h], 1`）由 reversed/cmonarch_get_full_name.cpp 还原，
+ *      （`mov dword ptr [rbp-50h], 1`）由 （私有还原笔记，未随本仓库发布） 还原，
  *      控制流与回跳由 stubs.asm 的 trampoline 负责 —— 本函数不再参与"补回原指令"。
  *      （旧实现要求"桩末尾必须是 90 90 90 E9 rel32"，因为 prepare_one 会无条件
  *        按最后 5 字节填 resume；那套机制已随旧补丁表一并删除。）
@@ -1993,7 +1993,7 @@ static void p8_monarch_reorder(void *out, const void *cm)
             ci = (cnl > 0) ? cc_lookup_name(&g_cc, cn) : -1;
 
             /* ★★ 第四版（2026-10-05）：删掉 +0x120 回退。
-             *   那个偏移来自 `reversed` 里"文化对象 id 字符串"的旧记录，但实机
+             *   那个偏移来自 `（私有还原笔记）` 里"文化对象 id 字符串"的旧记录，但实机
              *   证明它 1767 次**全部读到空串**（`+120 len=0`），从来没有救回一次。
              *   它的真正作用是**掩盖**"cu 根本不是文化对象"这个事实。
              *   现在 culture_obj_ok 已经在前面挡掉了非文化对象，这里不需要猜备胎。
@@ -2036,7 +2036,7 @@ static void p8_monarch_reorder(void *out, const void *cm)
                  * ⇒ 必须回答："SDA 的统治者到底有没有被 disp    ruler_name 处理过？"
                  *
                  * CMonarch+0x20 = owner_ref（8 字节 tag，+7 = 有效标志，见
-                 * reversed\game_types.hpp 的 CMonarch::owner_ref）。
+                 * （私有还原笔记，未随本仓库发布） 的 CMonarch::owner_ref）。
                  * 带上这个 tag，就能把"某个国家"与"它是否走到这里"直接对上：
                  *   · 日志里出现 SDA 且有 disp    ruler_name done ⇒ 这条路通了，问题在别处；
                  *   · 日志里【从不出现】SDA          ⇒ 那个名字不经过
@@ -2383,7 +2383,7 @@ static int      g_rsp_check_left = 64;
 /* ★★ gen     surn_len（RVA 0x3142F2，call StringAppend 之前）：把「姓」的字节数存下来。
  *   站点覆盖【5】字节：48 8D 4C 24 30   lea rcx, [rsp+30h]   （即 Src 的地址）
  *   此刻现场：rcx 即将指向 Src（已含"名…"），rdx = 姓数据指针，r8 = 姓字节数。
- *   我们只做"记下 r8"；被覆盖的 lea 由 reversed/build_full_name.cpp 还原，
+ *   我们只做"记下 r8"；被覆盖的 lea 由 （私有还原笔记，未随本仓库发布） 还原，
  *   回跳 0x3142F7 让 StringAppend 照常执行。
  *
  *   ★ 曾把覆盖长度误记为【4】字节 —— 那会让 gen     surn_len 的 E9 第 5 字节没被写入，
